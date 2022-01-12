@@ -1,0 +1,23 @@
+@font-face {
+    font-family: pacifio;
+    src: url("fonts/Pacifico/Pacifico-Regular.ttf");
+}
+
+body{
+    margin: 0px;
+    background-color: #90AACB;
+    display: flex;
+    color: #FEF1E6;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 80px;
+    height: 100vh;
+    font-family: pacifio;
+}
+
+@media screen and (max-width: 412px) {
+    body{
+        font-size: 60px;
+    }
+}
