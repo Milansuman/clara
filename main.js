@@ -3,6 +3,12 @@ class SnowFlake{
         this.x = Math.random() * window.innerWidth
         this.y = Math.random() * 15
         this.radius = Math.max(1.5, Math.random()*3)
+        if(Math.random() > 0.5){
+            this.left = true
+        }else{
+            this.left = false
+        }
+        this.counter = 0
     }
 
     draw(ctx){
@@ -14,6 +20,30 @@ class SnowFlake{
 
     update(){
         this.y += 1
+        switch (this.left) {
+            case true:
+                if(this.counter < 15){
+                    this.x += Math.random()/5
+                    this.counter += 1
+                }else{
+                    this.counter = 0
+                    this.left = false
+                }
+                break;
+            
+            case false:
+                if(this.counter < 15){
+                    this.x -= Math.random()/5
+                    this.counter += 1
+                }else{
+                    this.counter = 0
+                    this.left = true
+                }
+                break;
+            default:
+                break;
+        }
+
     }
 
     get pos(){
