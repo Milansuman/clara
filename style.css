@@ -5,15 +5,19 @@
 
 body{
     margin: 0px;
-    background-color: #90AACB;
+    background-color: #26282B;
     display: flex;
-    color: #FEF1E6;
+    color: #5F85DB;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 80px;
     height: 100vh;
     font-family: pacifio;
+}
+
+p{
+    z-index: 1;
 }
 
 @media screen and (max-width: 412px) {
