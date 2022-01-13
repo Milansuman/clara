@@ -69,13 +69,13 @@ let sfs = [] //list of snowflakes
 function onFrame(){
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
     sfs.push(new SnowFlake())
-    sfs.forEach(sf => {
+    sfs.forEach((sf, index) => {
         sf.draw(ctx)
         sf.update()
-        if(sf.pos.y >= window.innerHeight){
-            sfs.pop
+        if(sf.pos.y > window.innerHeight+20){
+            sfs.splice(index, 1)
         }
-    });
+    })
 
     requestAnimationFrame(onFrame)
 }
