@@ -1,3 +1,4 @@
+//test
 class SnowFlake{
     constructor(){
         this.x = Math.random() * window.innerWidth
